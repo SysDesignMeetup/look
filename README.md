@@ -21,7 +21,7 @@ When multiple input data sources need to be joined, the user does not have to wo
 TL;DR specific to Look:
 
 * Easy to run, test, and use on a single machine, both in dev and in prod setting.
-* Interfacing to the constellation of nodes is identical to interfacing with a single node.
+* Interfacing with the constellation of nodes is identical to interfacing with a single node.
 * Infinitely scalable means can add nodes on the fly, with no downtime.
 
 For a more complete description, please refer to [this section](https://github.com/SysDesignMeetup/sdm#educational-designs) of SysDesignMeetup's top-level README on our crowdsourced designs.
