@@ -68,7 +68,7 @@ One of these sources (that is recommended to be a stream of commits of a certain
 
 The code is implemented in a special language, and, for performance reasons and to avoid any downtime, it is JIT-compiled. The important part is that this special language is designed to guarantee a provable upper bound on the runtime of each function. This guarantees the stability of the high throughput that the system can sustain.
 
-In the SaaS setting, Look makes it easy to account for which commands and which queries, from which origins, are responsible for how much CPU usage. This allows for fine-grained billing down the road, analogous to "gas fees" in smart-contract-enabled Web3 ledgers.
+In the SaaS setting, Look makes it easy to keep track of which commands and which queries, from which origins, are responsible for how much CPU usage. This allows for fine-grained billing down the road, analogous to "gas fees" in smart-contract-enabled Web3 ledgers.
 
 Logically, the code deals with an infinite (2^64 bytes) set of "persisted RAM". Pragmatically, as this "RAM" is broken down into hierarchical pages for storage purposes, there are two constraints imposed on the code that implements CQRS: The "number of CPU commands" to execute, and the "number of randomly accessed" storage locations. Actions such as "scanning" the "storage RAM" are banned by design in the OLTP setting of Look.
 
@@ -87,7 +87,7 @@ The above may sound nontrivial, but it is straightforward. The reference impleme
 
 ## Background
 
-Obligatory links, are included here for the sake of completeness of this V1 proposal.
+Obligatory links, included here for the sake of completeness of this V1 proposal.
 
 * The original slides for Current, "The Pyramid", 2015: [in this repo](https://github.com/SysDesignMeetup/look/blob/main/.static/slides-2015.pdf), [on the Web](http://dima.ai/static/current.pdf).
 * The "Current 2.0" proposal, 2021: [in this repo](https://github.com/SysDesignMeetup/look/blob/main/.static/doc-2021.md), [on the Web](https://github.com/dkorolev/Current/blob/current20/current20.md).
